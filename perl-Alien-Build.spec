@@ -1,11 +1,14 @@
 %define upstream_name    Alien-Build
 %define upstream_version 1.78
 
+%global __requires_exclude ^perl\\(Alien\\xz\\)$
+%global __requires_exclude ^perl\\(FFI\\Platypus\\)$
+
 %{?perl_default_filter}
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    1
+Release:    2
 Summary:    Build external dependencies for use in CPAN
 License:    GPLv1+ or Artistic
 Group:      Development/Perl
