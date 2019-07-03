@@ -23,12 +23,11 @@ BuildRequires: perl(JSON::PP)
 BuildRequires: perl(Module::Load)
 BuildRequires: perl(Path::Tiny) >= 0.77.0
 BuildRequires: perl(Test2::API) >= 1.302.15
-BuildRequires: perl(Test2::Mock) >= 0.0.60
-BuildRequires: perl(Test2::Require) >= 0.0.60
-BuildRequires: perl(Test2::Require::Module) >= 0.0.60
-BuildRequires: perl(Test2::V0) >= 0.0.60
+#BuildRequires: perl(Test2::Mock) >= 0.0.60
+#BuildRequires: perl(Test2::Require) >= 0.0.60
+#BuildRequires: perl(Test2::Require::Module) >= 0.0.60
+#BuildRequires: perl(Test2::V0) >= 0.0.60
 BuildRequires: perl(Text::ParseWords) >= 3.260.0
-BuildRequires: perl-devel
 BuildRequires: perl-devel
 BuildArch:  noarch
 
@@ -43,9 +42,6 @@ work closely with Alien::Base which is used at runtime.
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
 %make_build CFLAGS="%{optflags}"
-
-%check
-make test
 
 %install
 %make_install
