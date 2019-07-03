@@ -47,7 +47,7 @@ work closely with Alien::Base which is used at runtime.
 %make_install
 
 %files
-%doc Changes INSTALL LICENSE META.json META.yml MYMETA.yml README SUPPORT example
+%doc Changes INSTALL LICENSE META.json META.yml README SUPPORT example
 %{_mandir}/man3/*
 %perl_vendorlib/alienfile.pm
 %perl_vendorlib/Alien/Build
