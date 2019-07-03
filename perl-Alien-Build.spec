@@ -1,8 +1,8 @@
 %define upstream_name    Alien-Build
 %define upstream_version 1.78
 
-%global __requires_exclude ^perl\\(Alien\\xz\\)$
-%global __requires_exclude ^perl\\(FFI\\Platypus\\)$
+%global __requires_exclude ^perl(Alien::xz)$
+%global __requires_exclude ^perl(FFI::Platypus)$
 
 %{?perl_default_filter}
 
