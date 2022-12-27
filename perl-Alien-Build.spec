@@ -9,7 +9,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    2
+Release:    1
 Summary:    Build external dependencies for use in CPAN
 License:    GPLv1+ or Artistic
 Group:      Development/Perl
