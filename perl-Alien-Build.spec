@@ -13,7 +13,7 @@ Release:    2
 Summary:    Build external dependencies for use in CPAN
 License:    GPLv1+ or Artistic
 Group:      Development/Perl
-Url:        http://metacpan.org/release/%{upstream_name}
+Url:        https://metacpan.org/release/%{upstream_name}
 Source0:    http://www.cpan.org/modules/by-module/Alien/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires: perl(Capture::Tiny) >= 0.170.0
