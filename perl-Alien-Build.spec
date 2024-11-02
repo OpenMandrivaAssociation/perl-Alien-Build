@@ -1,5 +1,4 @@
 %define upstream_name    Alien-Build
-%define upstream_version 1.78
 
 #global __requires_exclude ^perl(Alien::xz)$
 #global __requires_exclude ^perl(FFI::Platypus)$
@@ -7,31 +6,31 @@
 
 %{?perl_default_filter}
 
-Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    2
+Name:		perl-%{upstream_name}
+Version:	2.84
+Release:	1
 Summary:    Build external dependencies for use in CPAN
 License:    GPLv1+ or Artistic
 Group:      Development/Perl
 Url:        https://metacpan.org/release/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Alien/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:    http://www.cpan.org/modules/by-module/Alien/%{upstream_name}-%{version}.tar.gz
 
-BuildRequires: perl(Capture::Tiny) >= 0.170.0
+BuildRequires: perl(Capture::Tiny)
 BuildRequires: perl(ExtUtils::CBuilder)
-BuildRequires: perl(ExtUtils::MakeMaker) >= 6.640.0
-BuildRequires: perl(ExtUtils::ParseXS) >= 3.300.0
-BuildRequires: perl(FFI::CheckLib) >= 0.110.0
-BuildRequires: perl(File::Which) >= 1.100.0
+BuildRequires: perl(ExtUtils::MakeMaker)
+BuildRequires: perl(ExtUtils::ParseXS)
+BuildRequires: perl(FFI::CheckLib)
+BuildRequires: perl(File::Which)
 BuildRequires: perl(File::chdir)
 BuildRequires: perl(JSON::PP)
 BuildRequires: perl(Module::Load)
-BuildRequires: perl(Path::Tiny) >= 0.77.0
-BuildRequires: perl(Test2::API) >= 1.302.15
-#BuildRequires: perl(Test2::Mock) >= 0.0.60
-#BuildRequires: perl(Test2::Require) >= 0.0.60
-#BuildRequires: perl(Test2::Require::Module) >= 0.0.60
-#BuildRequires: perl(Test2::V0) >= 0.0.60
-BuildRequires: perl(Text::ParseWords) >= 3.260.0
+BuildRequires: perl(Path::Tiny)
+BuildRequires: perl(Test2::API)
+#BuildRequires: perl(Test2::Mock)
+#BuildRequires: perl(Test2::Require)
+#BuildRequires: perl(Test2::Require::Module)
+#BuildRequires: perl(Test2::V0)
+BuildRequires: perl(Text::ParseWords)
 BuildRequires: perl-devel
 BuildArch:  noarch
 
@@ -41,7 +40,7 @@ CPAN. It is mainly designed to be used at install time of a CPAN client, and
 work closely with Alien::Base which is used at runtime.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -59,5 +58,6 @@ work closely with Alien::Base which is used at runtime.
 %perl_vendorlib/Alien/Base
 %perl_vendorlib/Alien/Base.pm
 %perl_vendorlib/Alien/Role.pm
+%perl_vendorlib/Alien/Util.pm
 %perl_vendorlib/Test/Alien.pm
 %perl_vendorlib/Test/Alien
