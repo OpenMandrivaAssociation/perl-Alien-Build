@@ -8,12 +8,12 @@
 
 Name:		perl-%{upstream_name}
 Version:	2.84
-Release:	1
+Release:	2
 Summary:    Build external dependencies for use in CPAN
 License:    GPLv1+ or Artistic
 Group:      Development/Perl
 Url:        https://metacpan.org/release/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Alien/%{upstream_name}-%{version}.tar.gz
+Source0:    https://www.cpan.org/modules/by-module/Alien/%{upstream_name}-%{version}.tar.gz
 
 BuildRequires: perl(Capture::Tiny)
 BuildRequires: perl(ExtUtils::CBuilder)
